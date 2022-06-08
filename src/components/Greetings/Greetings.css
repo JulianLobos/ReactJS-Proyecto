@@ -1,0 +1,15 @@
+.welcome{
+    font-size: 25px;
+    padding: 10px 25px;
+    background-color: rgb(235, 235, 235);
+    font-weight: 600;
+    display: inline-block;
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.welcome:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
