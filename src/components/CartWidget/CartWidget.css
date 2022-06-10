@@ -1,0 +1,21 @@
+.cartIcon{
+    display: flex;
+    align-items: center;
+}
+
+div svg{
+    cursor: pointer;
+}
+
+.cartCounter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(245, 71, 71);
+    border-radius: 50%;
+    cursor: pointer;
+}

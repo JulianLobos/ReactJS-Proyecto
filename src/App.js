@@ -1,18 +1,22 @@
+import React from 'react';
 import './App.css';
-import Navbar from './components/NavBar';
-import ShoppingCart from './components/ShoppingCart/ShoppingCart';
-import Greetings from './components/Greetings/Greetings';
+import Navbar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import image1 from "./assets/jurold1.webp"
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <ShoppingCart />
-      <Greetings />
-      <h1 className='pageTitle'>jurold</h1>
-      <p className='pageSubtitle'>Black and white photography</p>
-      <p className='pageAuthor'>by Julian Lobos</p>
+      <ItemListContainer 
+      greetings="a Jurold" 
+      title="Cotton cloud" 
+      image={image1} 
+      alt="cotton cloud" 
+      description="Lorem ipsum dolor sit"
+      />
     </div>
+    
   );
 }
 
