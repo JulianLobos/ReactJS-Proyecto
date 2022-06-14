@@ -4,11 +4,7 @@ import ItemCount from '../ItemCount/ItemCount';
 const ItemListContainer = ({greetings, title, image, alt, description}) => {
 
     const addToCart = (cantidad) => {
-        if(cantidad>0){
-            console.log(`${cantidad} producto/s agregado/s al carrito.`);
-        }else{
-            console.log('Debe ingresar una cantidad.')
-        }
+        console.log(`${cantidad} producto/s agregado/s al carrito.`);
     }
 
     return(
@@ -21,7 +17,7 @@ const ItemListContainer = ({greetings, title, image, alt, description}) => {
                 <p className="itemDescription">{description}</p>
             </div>
             <ItemCount 
-            initial="3" 
+            initial="1" 
             stock="7" 
             onAdd={addToCart}
             />

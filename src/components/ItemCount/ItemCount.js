@@ -11,7 +11,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
     const counterRemove = () => {
-        if(counter>0){
+        if(counter>initial){
             setCounter(counter - 1);
         }
     }
