@@ -1,0 +1,45 @@
+.counterContainer{
+    display: flex;align-items: center;
+    flex-direction: column;
+}
+
+.itemCounter{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    border: 1px solid rgb(70, 70, 202);
+}
+
+.itemCounter svg{
+    margin: 0 10px;
+    color: rgb(70, 70, 202);
+    transition: all 0.2s ease;
+}
+
+.itemCounter svg:active{
+    transform: translateY(3px);
+}
+
+.counterNumber{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.addBtn{
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: none;
+    border: 1px solid rgb(70, 70, 202);
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addBtn:hover{
+    background-color: rgb(70, 70, 202);
+    color: white;
+}
