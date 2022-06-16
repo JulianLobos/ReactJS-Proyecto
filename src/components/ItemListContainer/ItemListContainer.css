@@ -1,16 +1,21 @@
 .itemsContainer{
     background-color: white;
-    height: 60vh;
+    height: auto;
     margin: 0 0 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 .welcome{
     font-size: 25px;
     padding: 10px 25px;
-    margin: 15px 0;
+    margin: 35px 0;
     background-color: rgb(235, 235, 235);
     font-weight: 600;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -18,35 +23,4 @@
 
 .welcome:hover{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.itemsContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.itemCard{
-    background-color: rgb(235, 235, 235);
-    width: 250px;
-    height: auto;
-    border-radius: 25px;
-    padding: 8px;
-    margin: 8px 8px 40px 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;   
-}
-
-.itemTitle{
-    font-weight: 600;
-    font-size: 25px;
-    margin: 0 0 8px 0;
-}
-
-.itemImage{
-    width: 200px;
-    margin: 0 0 8px 0;
-}
-
-.itemDescription{
-    padding: 10px 0;
 }

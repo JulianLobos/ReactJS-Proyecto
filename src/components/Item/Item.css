@@ -1,0 +1,76 @@
+.itemCard{
+    position: relative;
+    width: 200px;
+    height: 375px;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;   
+    transition: all 0.2s ease;
+    text-align: start;
+    border-radius: 5px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.itemCard:hover{
+    transform: scale(1.01);
+}
+
+.itemTitle{
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 8px 8px 8px;
+    border-bottom: 1px #ccc solid;
+}
+
+.itemImage{
+    object-fit: cover;
+    width: 200px;
+    margin: 0 0 10px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.itemDescription{
+    margin: 0 8px 8px 8px;
+}
+
+.favoriteIcon{
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 10px;
+    transition: all 0.3s ease;
+}
+
+.favoriteIcon:hover{
+    transform: scale(1.075);
+}
+
+.itemDetails{
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid rgb(70, 70, 202);
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: max-content;
+}
+
+.itemDetails:hover{
+    background-color: rgb(70, 70, 202);
+    color: white;
+}
+
+.itemDetails:active{
+    transform: translateY(2px);
+}
+
