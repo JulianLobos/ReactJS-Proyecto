@@ -12,7 +12,7 @@ const Item = ({datos}) => {
             <p className='itemPrice'>US$ 35</p>
             <p className='itemShipping'>Envío gratis!</p>
             <p className="itemDescription">{datos.title}</p>
-            <button className='itemDetails'> Ver detalles <ArrowForwardIosIcon className='detailArrow' /></button>
+            <button type="submit" className='itemDetails'> Ver detalles <ArrowForwardIosIcon className='detailArrow' /></button>
         </div>
     )
 }
