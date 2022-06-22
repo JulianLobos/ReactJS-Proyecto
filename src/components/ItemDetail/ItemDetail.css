@@ -1,0 +1,84 @@
+.itemDetailBackground{
+    height: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.itemDetailTitle{
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    grid-column: 1 / span 2;
+}
+
+.itemDetailImg{
+    width: 400px;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 auto;
+    padding: 20px;
+    border: 15px solid black;
+}
+
+.itemDetailPrice{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.mediosDePago{
+    font-size: 0.85rem;
+    color: rgb(70, 70, 202);
+    cursor: pointer;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mediosDePago>svg{
+    width: 18px;
+    margin-right: 4px;
+}
+
+.tamano{
+    font-weight: 600;
+}
+
+.itemDetailBtn,.itemDetailTamano{
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid rgb(70, 70, 202);
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: max-content;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.itemDetailBtn:hover, .itemDetailTamano:hover{
+    background-color: rgb(70, 70, 202);
+    color: white;
+}
+
+.itemDetailDescription{
+    margin: 15px;
+
+}
+
+.envioGratis{
+    color: rgb(66, 173, 66);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envioGratis>svg{
+    width: 18px;
+    margin-right: 4px;
+}

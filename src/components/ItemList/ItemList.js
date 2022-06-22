@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './ItemList.css';
 import Item from '../Item/Item';
 
-const ItemList = () => {
-    const [images, setImages] = useState([]);
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/photos')
-            .then((response) => response.json())
-            .then((json) => setImages(json));
-    }, []);
-    
+const ItemList = ({images}) => {
     return(
         <div className="itemsContainer">
-            {images.slice(0, 15).map((image) => (
+            {images.map((image) => (
                 <Item key={image.id} datos={image} />
             ))}
         </div>

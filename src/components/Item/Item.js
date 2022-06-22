@@ -6,12 +6,11 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Item = ({datos}) => {
     return(
         <div className="itemCard">
-            <img className="itemImage" src={datos.url} alt={datos.id}></img>
+            <img className="itemImage" src={datos.img} alt={datos.id}></img>
             <FavoriteBorderIcon className='favoriteIcon'/>
-            <p className="itemTitle">{datos.id}</p>
-            <p className='itemPrice'>US$ 35</p>
+            <p className="itemTitle">{datos.name}</p>
+            <p className='itemPrice'>{datos.price}</p>
             <p className='itemShipping'>Envío gratis!</p>
-            <p className="itemDescription">{datos.title}</p>
             <button type="submit" className='itemDetails'> Ver detalles <ArrowForwardIosIcon className='detailArrow' /></button>
         </div>
     )
