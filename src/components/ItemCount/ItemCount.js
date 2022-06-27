@@ -18,6 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return(
         <div className='counterContainer'>
+            <p className='chooseQuantity'>Cantidad:</p>
             <div className='itemCounter'>
             <AddIcon onClick={counterAdd}/>
             <p className='counterNumber'>{counter}</p>

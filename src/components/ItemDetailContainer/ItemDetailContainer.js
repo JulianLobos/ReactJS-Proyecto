@@ -4,11 +4,13 @@ import { getProductById } from '../../assets/Datos';
 import './ItemDetailContainer.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { CircularProgress } from '@mui/material';
-
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+ 
 const ItemDetailContainer = () => {
-    const[img, setImg] = useState([])
+    let { id } = useParams();
+    const[img, setImg] = useState({})
     const[loading, setLoading] = useState(true)
-    const id = 4
 
     useEffect(() => {
         getProductById(id)
@@ -18,15 +20,15 @@ const ItemDetailContainer = () => {
             }
             )
             .catch(err => console.log(err))
-    }, [])
-
-    console.log(img)
+    }, [id])
 
     return(
         <div>
             <div className='detailContainer'>
-                <ArrowBackIcon className='arrowBack'/>
-                {loading ? <div><CircularProgress /></div> : <ItemDetail img={img[0].img} name={img[0].name} description={img[0].description} price={img[0].price} size={img[0].size}/>}
+                <Link to='/'>
+                    <ArrowBackIcon className='arrowBack'/>
+                </Link>
+                {loading ? <div><CircularProgress /></div> : <ItemDetail img={img.img} name={img.name} description={img.description} price={img.price} size={img.size} stock={img.stock}/>}
             </div>
         </div>
     )

@@ -9,6 +9,7 @@
     font-weight: 900;
     text-transform: uppercase;
     grid-column: 1 / span 2;
+    margin-bottom: 15px;
 }
 
 .itemDetailImg{

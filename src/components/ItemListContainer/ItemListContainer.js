@@ -3,20 +3,18 @@ import "./ItemListContainer.css";
 import { getProductByCategory } from '../../assets/Datos';
 import { CircularProgress } from '@mui/material';
 import ItemList from "../ItemList/ItemList";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
-    // const addToCart = (cantidad) => {
-    //     console.log(`${cantidad} producto/s agregado/s al carrito.`);
-    // }
-
+    let { id } = useParams();
     const [images, setImages] = useState([]);
-    const category = "animals"
+    
     useEffect(() => {
-        getProductByCategory(category)
+        getProductByCategory(id)
             .then(res => setImages(res))
             .catch(err => console.log(err))
-    }, []);
+    }, [id]);
 
     return(
         <div className="container">
