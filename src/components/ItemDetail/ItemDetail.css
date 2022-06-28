@@ -9,11 +9,15 @@
     font-weight: 900;
     text-transform: uppercase;
     grid-column: 1 / span 2;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.itemDetailInfo{
+    padding: 0 3rem;
 }
 
 .itemDetailImg{
-    width: 400px;
+    width: 65%;
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
@@ -60,6 +64,41 @@
     align-items: center;
     margin-top: 10px;
 }
+
+/* *** Animación para el botón de Finalizar compra *** */
+
+.itemDetailBtn{
+    -webkit-animation: aparecer 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: aparecer 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes aparecer {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+}
+
+/*     ***************************************   */
 
 .itemDetailBtn:hover, .itemDetailTamano:hover{
     background-color: rgb(70, 70, 202);

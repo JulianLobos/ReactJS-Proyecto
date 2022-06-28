@@ -3,6 +3,9 @@ import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from 'react-router-dom';
 
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
 const NavBar = () => {
     return(
         <div>
@@ -17,9 +20,11 @@ const NavBar = () => {
                     <Link to="/category/street" className="menuItem">Street</Link>
                     <Link to="/category/nature" className="menuItem">Nature</Link>
                 </ul>
-                <div>
-                    <CartWidget />
-                </div>
+                <Tippy content="Carrito de compras" placement="bottom">
+                    <div>
+                        <CartWidget className="cartIcon"/>
+                    </div>
+                </Tippy>
             </nav>
         </div>
     );

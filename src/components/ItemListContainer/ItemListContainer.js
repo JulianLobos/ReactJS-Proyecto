@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./ItemListContainer.css";
-import { getProductByCategory } from '../../assets/Datos';
+import { getProducts } from '../../assets/Datos';
 import { CircularProgress } from '@mui/material';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     const [images, setImages] = useState([]);
     
     useEffect(() => {
-        getProductByCategory(id)
+        getProducts(id)
             .then(res => setImages(res))
             .catch(err => console.log(err))
     }, [id]);

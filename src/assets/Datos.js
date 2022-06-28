@@ -417,18 +417,47 @@ export const Datos = [
         stock: 6,        
         size: '20x20'  
     },
+    {
+        id: 39,
+        category: 'street',
+        category2: 'all',
+        description: 'Día lluvioso en San Salvador de Jujuy, nos encontramos con ríos de calles. Se entrega la impresión en el tamaño elegido, en papel glossy, encuadrada en madera y protegida con vidrio.',
+        img: "https://live.staticflickr.com/65535/52179311613_3a2ebe325a_k.jpg",
+        name: 'Diluvio',
+        price: "$2500",
+        stock: 6,        
+        size: '20x20'  
+    },
+    {
+        id: 40,
+        category: 'street',
+        category2: 'all',
+        description: 'Un señor vuelve de hacer las compras cruzando la calle inundada por la lluvia, San Salvador de Jujuy. Se entrega la impresión en el tamaño elegido, en papel glossy, encuadrada en madera y protegida con vidrio.',
+        img: "https://live.staticflickr.com/65535/52179311348_da4aa9b40f_k.jpg",
+        name: 'Tobogán de agua',
+        price: "$2500",
+        stock: 4,        
+        size: '20x20'  
+    },
+    {
+        id: 41,
+        category: 'street',
+        category2: 'all',
+        description: 'La gente se ve obligada a usar los pilotos por la lluvia torrencial, San Salvador de Jujuy. Se entrega la impresión en el tamaño elegido, en papel glossy, encuadrada en madera y protegida con vidrio.',
+        img: "https://live.staticflickr.com/65535/52179792920_be4d8d06f5_k.jpg",
+        name: 'Piloto',
+        price: "$2500",
+        stock: 7,        
+        size: '20x20'  
+    },
 
 ];
 
-export const getProductByCategory = (category) =>{
-    if(category === undefined){
-        category = 'all'
-    }
-
+export const getProducts = (category) =>{
     return new Promise ((resolve,reject) => {
         setTimeout(() => {
             if(Datos.length>0){
-                resolve(Datos.filter(item => item.category === category || item.category2 === category))}
+                resolve(category ? Datos.filter(item => item.category === category) : Datos)}
             else{
                 reject("No se encontraron datos.")
             } 
