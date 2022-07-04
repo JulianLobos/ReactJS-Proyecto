@@ -19,7 +19,7 @@ const Cart = () => {
         <p>Imagen</p>
         <p>Nombre</p>
         <p>Precio</p>
-        <p>Total Unitario</p>
+        <p>Total por Item</p>
         <p>Eliminar</p>
       </div>
       {cartItems.map((item) =>{
@@ -30,7 +30,7 @@ const Cart = () => {
             <div className='cartItem' key={item.id}>
               <img src={item.img} className="cartItemImg" alt={item.name}></img>
               <p className='cartItemName'>{item.name}</p> 
-              <p className='cartItemCounter'><AddIcon onClick={() => addQuantity(item.id)}  />{item.counter}<RemoveIcon onClick={() => removeQuantity(item.id)} /></p>
+              <p className='cartItemCounter'><AddIcon className="cartItemCounterBtn" onClick={() => addQuantity(item.id)}  />{item.counter}<RemoveIcon className="cartItemCounterBtn" onClick={() => removeQuantity(item.id)} /></p>
               <p className='cartItemPrice'>${item.price}</p>
               <p className='cartItemTotalPrice'>${totalItemPrice}</p>
               <button className='cartItemRemoveBtn' onClick={() => removeItem(item.id)}>Eliminar item</button>

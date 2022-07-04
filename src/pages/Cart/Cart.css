@@ -60,11 +60,21 @@
     font-size: 1.25rem;
 }
 
+.cartItemCounterBtn{
+    color: rgb(70, 70, 202);
+    transition: all 0.3s ease;
+}
+
+.cartItemCounterBtn:active{
+    transform: translateY(4px);
+    transition: all 0.3s ease;
+}
+
 .cartItemCounter svg{
     margin: 0 4px;
 }
 
-.cartItemRemoveBtn, .cartItemsClear, .cartItemsBuy{
+.cartItemsClear, .cartItemsBuy{
     grid-column: 6;
     grid-row: 1;
     width: max-content;
@@ -79,8 +89,28 @@
     transition: all 0.3s ease;
 }
 
-.cartItemRemoveBtn:hover, .cartItemsClear:hover, .cartItemsBuy:hover{
+.cartItemsClear:hover, .cartItemsBuy:hover{
     background-color: rgb(70, 70, 202);
+    color: white;
+}
+
+.cartItemRemoveBtn{
+    border: 1px solid rgb(245, 71, 71);
+    grid-column: 6;
+    grid-row: 1;
+    width: max-content;
+    font-size: 1rem;
+    padding: 5px 15px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.cartItemRemoveBtn:hover{
+    background-color: rgb(245, 71, 71);
     color: white;
 }
 
