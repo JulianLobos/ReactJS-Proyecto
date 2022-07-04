@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const ItemDetail = ({img, name, description, price, size, stock}) => {
+const ItemDetail = ({img, name, description, price, size, stock, id}) => {
 
     const addAlert = (cart) => toast.success(cart > 1 ? `${cart} productos agregados al carrito!` : `${cart} producto agregado al carrito!`, 
     {position: "top-right",
@@ -20,7 +20,7 @@ const ItemDetail = ({img, name, description, price, size, stock}) => {
     draggable: true,
     progress: undefined,});
 
-    const [cantidad, setCantidad] = useState();
+    const [cantidad, setCantidad] = useState(0);
     const addToCart = (cart) => {
         setCantidad(cart);
         addAlert(cart);
@@ -37,8 +37,7 @@ const ItemDetail = ({img, name, description, price, size, stock}) => {
                 <p className='itemDetailDescription'>{description}</p>
                 <p className='tamano'>Tamaño en cm:</p>
                 <p className='itemDetailTamano'>{size}</p>
-                {cantidad ? '' : <ItemCount stock={stock} initial="1" onAdd={addToCart}/>}
-                {cantidad > 0 ? <Link to="/cart"><button className='itemDetailBtn'>Finalizar Compra</button></Link> : ''}
+                {cantidad > 0 ? <Link to="/cart"><button className='itemDetailBtn'>Finalizar Compra</button></Link> : <ItemCount itemId={id} stock={stock} initial="1" onAdd={addToCart}/>}
                 <ToastContainer/>
             </div>
         </div>
