@@ -3,7 +3,8 @@ import './ItemCount.css'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({img, stock, initial, addItem}) => {
+    
     const [counter, setCounter] = useState(parseInt(initial));
     const counterAdd = () => {
         if(counter<stock){
@@ -24,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <p className='counterNumber'>{counter}</p>
             <RemoveIcon onClick={counterRemove}/>
         </div>
-        <button className='addBtn' onClick={()=>onAdd(counter)}>Agregar al Carrito</button>
+        <button className='addBtn' onClick={()=> addItem(img, counter)}>Agregar al Carrito</button>
         </div>
     );
 };

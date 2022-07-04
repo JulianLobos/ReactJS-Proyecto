@@ -1,4 +1,157 @@
-h1{
-    padding: 25% 0 0 0;
-    text-align: center;
+.cart{
+    padding: 100px 0 0 0;
+}
+
+.cartItemsContainer{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.cartTitles{
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin: 10px 80px 20px 80px;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartItem{
+    margin: 0px 80px;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.cartItem:nth-child(odd){
+    background-color: rgb(247, 247, 247);
+}
+
+.cartItemImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 auto;
+}
+
+.cartItemName{
+    grid-column: 3;
+    grid-row: 1;
+    text-transform: uppercase;
+}
+
+.cartItemPrice{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.cartItemCounter{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.cartItemCounter svg{
+    margin: 0 4px;
+}
+
+.cartItemRemoveBtn, .cartItemsClear, .cartItemsBuy{
+    grid-column: 6;
+    grid-row: 1;
+    width: max-content;
+    font-size: 1rem;
+    padding: 5px 15px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(70, 70, 202);
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartItemRemoveBtn:hover, .cartItemsClear:hover, .cartItemsBuy:hover{
+    background-color: rgb(70, 70, 202);
+    color: white;
+}
+
+.cartItemsClear{
+    margin: 15px auto;
+}
+
+.cartFinish{
+    margin: 10px 80px;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+}
+
+.cartItemsTotal{
+    border: 1px solid rgb(70, 70, 202);
+    width: max-content;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: 600;
+    grid-column: 5;
+    margin: 0 auto;
+}
+
+.cartItemsBuy{
+    grid-column: 6;
+}
+
+.emptyCart{
+    padding: 100px 0 0 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.emptyCartText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 71, 71);
+    width: max-content;
+    border-radius: 5px;
+    color: white;
+    margin: 15px auto 50px auto;
+    padding: 10px 30px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.emptyCartText:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.emptyCart svg{
+    width: 40px;
+    height: 40px;
+}
+
+.emptyCartGoBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyCartGoBack svg{
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.emptyCartGoBack:hover > svg{
+    transform: translateX(-30px);
+}
+
+.emptyCartGoBack:active > svg{
+    transform: translateX(-60px);
 }

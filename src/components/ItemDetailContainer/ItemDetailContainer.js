@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
                         <ArrowBackIcon className='arrowBack'/>
                     </Tippy>
                 </Link>
-                {loading ? <div><CircularProgress className='progress'/></div> : <ItemDetail img={img.img} name={img.name} description={img.description} price={img.price} size={img.size} stock={img.stock}/>}
+                {loading ? <div><CircularProgress className='progress'/></div> : <ItemDetail img={img}/>}
             </div>
         </div>
     )

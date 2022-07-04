@@ -9,7 +9,7 @@ const Item = ({datos}) => {
             <img className="itemImage" src={datos.img} alt={datos.id}></img>
             <FavoriteBorderIcon className='favoriteIcon'/>
             <p className="itemTitle">{datos.name}</p>
-            <p className='itemPrice'>{datos.price}</p>
+            <p className='itemPrice'>${datos.price}</p>
             <p className='itemShipping'>Envío gratis!</p>
             <button type="submit" className='itemDetails'> Ver detalles <ArrowForwardIosIcon className='detailArrow' /></button>
         </div>
