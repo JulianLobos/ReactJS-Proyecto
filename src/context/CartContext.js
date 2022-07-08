@@ -5,6 +5,15 @@ export const CartContext = createContext();
 export const CartProvider = ({children}) => {
     const [cartItems, setCartItem] = useState([]);
 
+    const getQuantity = () => {
+        let quantity = 0;
+
+        cartItems.forEach((img) => {
+           quantity += img.counter;
+        })        
+        return quantity;
+    }
+
     const addQuantity = (id) => {
         setCartItem(cartItems.map((item) => {
             if(item.id === id && item.counter < item.stock){
@@ -24,7 +33,7 @@ export const CartProvider = ({children}) => {
     }
 
     const isInCart = (id) => {
-        return cartItems.find(img => img.id === id);
+        return cartItems.some(img => img.id === id);
     }
 
     const addItem = (img, counter) => {
@@ -45,7 +54,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cartItems, setCartItem, addItem, removeItem, clear, isInCart, addQuantity, removeQuantity }}>
+        <CartContext.Provider value={{cartItems, setCartItem, addItem, removeItem, clear, isInCart, addQuantity, removeQuantity, getQuantity }}>
         {children}
         </CartContext.Provider>
     )

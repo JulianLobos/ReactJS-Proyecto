@@ -7,21 +7,15 @@ import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
 
-  const {cartItems} = useContext(CartContext)
-
-  let quantity = 0;
-  cartItems.map((img) => {
-    quantity += img.counter;
-    return quantity;
-  })
+  const { getQuantity } = useContext(CartContext)
 
   return (
-    cartItems.length > 0 ? 
+    getQuantity() > 0 ? 
     <Link to="/cart">
     <div className='cartIcon'>
       <ShoppingCartIcon />
       <div className='cartCounter'>
-        <p className='counterNumber'>{quantity}</p>
+        <p className='counterNumber'>{getQuantity()}</p>
       </div>
     </div>
   </Link>
