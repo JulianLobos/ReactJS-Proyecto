@@ -1,5 +1,7 @@
 import React, {createContext, useState} from 'react';
 
+import { toast } from 'react-toastify';
+
 export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
@@ -49,6 +51,17 @@ export const CartProvider = ({children}) => {
         return cartItems.some(img => img.id === id);
     }
 
+    ////////////     toastify     ////////////
+    
+    const addAlert = (counter) => toast.success(counter > 1 ? `${counter} productos agregados al carrito!` : `${counter} producto agregado al carrito!`, 
+    {position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,});
+
     const addItem = (img, counter) => {
         isInCart(img.id) ? setCartItem(cartItems.map((item) => {
             if(item.id === img.id && item.counter + counter <= img.stock){
@@ -56,7 +69,9 @@ export const CartProvider = ({children}) => {
             }
             return item
         })) : setCartItem([...cartItems, { id: img.id, counter: counter, name: img.name, price: img.price, img: img.img, stock: img.stock }])
+        addAlert(counter);
     }
+
 
     const removeItem = (itemId) => {
         setCartItem(cartItems.filter(item => item.id !== itemId));
@@ -67,7 +82,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cartItems, setCartItem, addItem, removeItem, clear, isInCart, addQuantity, removeQuantity, getQuantity, getItemTotalPrice, totalPrice }}>
+        <CartContext.Provider value={{cartItems, setCartItem, addItem, removeItem, clear, isInCart, addQuantity, removeQuantity, getQuantity, getItemTotalPrice, totalPrice, addAlert }}>
         {children}
         </CartContext.Provider>
     )
