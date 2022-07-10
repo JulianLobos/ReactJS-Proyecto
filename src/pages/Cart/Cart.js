@@ -9,8 +9,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 const Cart = () => {
-  const {cartItems, clear, removeItem, addQuantity, removeQuantity} = useContext(CartContext) 
-  let totalPrice = 0;
+  const {cartItems, clear, removeItem, addQuantity, removeQuantity, getItemTotalPrice, totalPrice} = useContext(CartContext)
   return (
     cartItems.length > 0 ? <div className='cart'>
     <div className='cartItemsContainer'>
@@ -23,8 +22,6 @@ const Cart = () => {
         <p>Eliminar</p>
       </div>
       {cartItems.map((item) =>{
-        const totalItemPrice = item.price * item.counter;
-        totalPrice += totalItemPrice;
         if(item.counter > 0){
           return(
             <div className='cartItem' key={item.id}>
@@ -32,7 +29,7 @@ const Cart = () => {
               <p className='cartItemName'>{item.name}</p> 
               <p className='cartItemCounter'><AddIcon className="cartItemCounterBtn" onClick={() => addQuantity(item.id)}  />{item.counter}<RemoveIcon className="cartItemCounterBtn" onClick={() => removeQuantity(item.id)} /></p>
               <p className='cartItemPrice'>${item.price}</p>
-              <p className='cartItemTotalPrice'>${totalItemPrice}</p>
+              <p className='cartItemTotalPrice'>${getItemTotalPrice(item)}</p>
               <button className='cartItemRemoveBtn' onClick={() => removeItem(item.id)}>Eliminar item</button>
             </div>
           )
@@ -41,7 +38,7 @@ const Cart = () => {
       })}
     </div>
     <div className='cartFinish'>
-    <p className='cartItemsTotal'>Total carrito ${totalPrice}</p>
+    <p className='cartItemsTotal'>Total carrito ${totalPrice()}</p>
     <button className='cartItemsBuy'>Comprar</button>
     </div>
     <button className='cartItemsClear' onClick={() => clear()}>Limpiar Carrito</button>

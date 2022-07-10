@@ -1,21 +1,23 @@
 import React, {useState, useEffect} from 'react';
-import "./ItemListContainer.css";
 import { CircularProgress } from '@mui/material';
 import ItemList from "../ItemList/ItemList";
+import { useParams } from 'react-router-dom';
 
-//////////////     Firebase - Firestore     //////////////
+// firebase
 import { db } from '../../firebase/firebaseConfig'
-import { collection, query, getDocs } from 'firebase/firestore';
+import {collection,	query, getDocs,	where} from 'firebase/firestore';
 
-const ItemListContainer = () => {
+const Category = () => {
+    let { category } = useParams();
     const [imagesData, setImagesData] = useState([]);
     
-    const getImages = async () => {
-        const q = query(collection(db, 'images'));
+    const getImagesByCategory = async () => {
+        const q = query(collection(db, 'images'), where('category', '==', category));
         const querySnapshot = await getDocs(q);
         const docs = [];
-
+        // console.log(querySnapshot);
         querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
             docs.push({...doc.data(), id: doc.id})
           });
           console.log(docs)
@@ -23,8 +25,8 @@ const ItemListContainer = () => {
     };
 
     useEffect(() => {
-        getImages();
-    }, [])
+        getImagesByCategory();
+    })
 
     return(
         <div className="container">
@@ -35,4 +37,4 @@ const ItemListContainer = () => {
     );
 };
 
-export default ItemListContainer;
+export default Category;
