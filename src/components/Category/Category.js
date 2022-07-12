@@ -10,23 +10,21 @@ import {collection,	query, getDocs,	where} from 'firebase/firestore';
 const Category = () => {
     let { category } = useParams();
     const [imagesData, setImagesData] = useState([]);
-    
-    const getImagesByCategory = async () => {
-        const q = query(collection(db, 'images'), where('category', '==', category));
-        const querySnapshot = await getDocs(q);
-        const docs = [];
-        // console.log(querySnapshot);
-        querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            docs.push({...doc.data(), id: doc.id})
-          });
-          console.log(docs)
-          setImagesData(docs);
-    };
 
     useEffect(() => {
+        const getImagesByCategory = async () => {
+            const q = query(collection(db, 'images'), where('category', '==', category));
+            const querySnapshot = await getDocs(q);
+            const docs = [];
+            // console.log(querySnapshot);
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                docs.push({...doc.data(), id: doc.id})
+              });
+              setImagesData(docs);
+        };
         getImagesByCategory();
-    })
+    }, [category])
 
     return(
         <div className="container">
