@@ -44,7 +44,8 @@ const Buy = () => {
 
   return (
     <div>
-      <h1 className='buyTitle'>Buy</h1>      
+      <h1 className='buyTitle'>Finaliza tu compra!</h1>
+      <p className='finishPurchaseMessage'>* Rellena los siguientes campos con tus datos para finalizar tu compra!</p>      
       <form className='formContainer' onSubmit={onSubmit}>
       <TextField 
           id="outlined-basic" 
@@ -54,6 +55,7 @@ const Buy = () => {
 					name='name'
 					value={values.name}
 					onChange={handleOnChange}
+          required
 				/>
 				<TextField
           id="outlined-basic" 
@@ -63,6 +65,7 @@ const Buy = () => {
 					name='lastName'
 					value={values.lastName}
 					onChange={handleOnChange}
+          required
 				/>
 				<TextField
           id="outlined-basic" 
@@ -73,10 +76,11 @@ const Buy = () => {
 					name='email'
 					value={values.email}
 					onChange={handleOnChange}
+          required
 				/>
-        <button className='btnASendAction'>Send</button>
+        <button className='submitForm'>Enviar</button>
       </form>
-      <PurchaseSuccess PurchaseId={purchaseID} name={values.name} />
+      {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} name={values.name} />}
     </div>
   )
 }

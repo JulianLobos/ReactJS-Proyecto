@@ -1,5 +1,5 @@
 .buyTitle{
-    padding: 80px 0 0 0;
+    padding: 80px 0 5px 0;
 }
 
 .formContainer{
@@ -7,4 +7,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.submitForm{
+    width: max-content;
+    font-size: 1rem;
+    padding: 5px 15px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(70, 70, 202);
+    margin: 15px 0 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitForm:hover{
+    background-color: rgb(70, 70, 202);
+    color: white;
+}
+
+.finishPurchaseMessage{
+    padding: 0 0 15px 0;
 }
