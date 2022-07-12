@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import './Buy.css';
 import { CartContext } from '../../context/CartContext';
 import PurchaseSuccess from '../../components/PurchaseSuccess/PurchaseSuccess';
+import { CircularProgress } from '@mui/material';
 
 //////////        Firebase        //////////
 import { collection, addDoc } from 'firebase/firestore';
@@ -19,6 +20,7 @@ const initialState = {
 const Buy = () => {
   const [values, setValues] = useState(initialState);
 	const [purchaseID, setPurchaseID] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { cartItems, setCartItem, totalPrice } = useContext(CartContext);
 
   const handleOnChange = (e) => {
@@ -28,6 +30,7 @@ const Buy = () => {
 
   const onSubmit = async (e) => {
 		e.preventDefault();
+    setIsLoading(true);
     const date = new Date();
     const totalPurchase = totalPrice();
 		const docRef = await addDoc(collection(db, 'purchases'), {
@@ -39,8 +42,9 @@ const Buy = () => {
 		setPurchaseID(docRef.id);
 		setValues(initialState);
     setCartItem([]);
-    console.log(docRef.id)
+    setIsLoading(false);
 	};
+
 
   return (
     <div>
@@ -80,7 +84,8 @@ const Buy = () => {
 				/>
         <button className='submitForm'>Enviar</button>
       </form>
-      {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} name={values.name} />}
+      {isLoading ? <CircularProgress className='circularProgress'/> : ''}
+      {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} />}
     </div>
   )
 }
