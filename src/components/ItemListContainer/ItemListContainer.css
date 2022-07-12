@@ -29,3 +29,9 @@
 .progress{
     margin: 25%;
 }
+
+@media (max-width: 800px) {
+    .itemsContainer{
+        padding: 35px 0 0 0;
+    }
+}

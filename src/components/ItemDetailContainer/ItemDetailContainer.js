@@ -11,7 +11,7 @@ import 'tippy.js/dist/tippy.css';
 import { db } from '../../firebase/firebaseConfig';
 
 //////////////     Firebase - Firestore     //////////////
-import {collection,	query, getDocs,	documentId,	where} from 'firebase/firestore';
+import { getDoc, doc } from 'firebase/firestore';
  
 const ItemDetailContainer = () => {
     let { id } = useParams();
@@ -20,14 +20,10 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const getImages = async () => {
-            const q = query(collection(db, 'images'), where(documentId(), '==', id));
-            const querySnapshot = await getDocs(q);
-            const docs = [];
-
-            querySnapshot.forEach((doc) => {
-                docs.push({...doc.data(), id: doc.id})
-              });
-              setImg(docs[0]);
+            const document = doc(db, 'images', id);
+            const response = await getDoc(document);
+            const result = {id: response.id, ...response.data()};
+            setImg(result);
         };
         getImages();
         setLoading(false);

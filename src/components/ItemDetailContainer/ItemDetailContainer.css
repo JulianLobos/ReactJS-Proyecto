@@ -5,6 +5,7 @@
 
 .arrowBack{
     position: absolute;
+    top: 50px;
     left: 0;
     background-color: rgba(0,0,0,0.6);
     color: white;
@@ -15,4 +16,10 @@
 
 .arrowBack:hover{
     transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+    .detailContainer{
+        padding: 35px 15px;
+    }
 }

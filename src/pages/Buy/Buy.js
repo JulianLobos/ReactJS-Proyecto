@@ -55,34 +55,40 @@ const Buy = () => {
           id="outlined-basic" 
           label="Nombre"
           variant="outlined"
-					style={{ margin: 10, width: 400 }}
+					style={{ margin: 10, maxWidth: 400, minWidth: 280 }}
 					name='name'
 					value={values.name}
 					onChange={handleOnChange}
           required
+          disabled={purchaseID!==''}
+          fullWidth
 				/>
 				<TextField
           id="outlined-basic" 
           label="Apellido"
           variant="outlined"
-					style={{ margin: 10, width: 400 }}
+					style={{ margin: 10, maxWidth: 400, minWidth: 280 }}
 					name='lastName'
 					value={values.lastName}
 					onChange={handleOnChange}
           required
+          disabled={purchaseID!==''}
+          fullWidth
 				/>
 				<TextField
           id="outlined-basic" 
           label="Email"
           variant="outlined"
           type="email"
-					style={{ margin: 10, width: 400 }}
+					style={{ margin: 10, maxWidth: 400, minWidth: 280 }}
 					name='email'
 					value={values.email}
 					onChange={handleOnChange}
           required
+          disabled={purchaseID!==''}
+          fullWidth
 				/>
-        <button className='submitForm'>Enviar</button>
+        {purchaseID!=='' ? '' : <button disabled={totalPrice() === 0} className='submitForm'>Enviar</button>}
       </form>
       {isLoading ? <CircularProgress className='circularProgress'/> : ''}
       {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} />}

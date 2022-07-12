@@ -18,16 +18,16 @@
 
 .itemDetailImg{
     width: 65%;
+    border-radius: 5px;
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
-    padding: 20px;
-    border: 15px solid black;
 }
 
 .itemDetailPrice{
     font-size: 2.5rem;
     font-weight: 600;
+    color: rgb(66, 173, 66);
 }
 
 .mediosDePago{
@@ -121,4 +121,16 @@
 .envioGratis>svg{
     width: 18px;
     margin-right: 4px;
+}
+
+@media (max-width: 800px) {
+    .itemDetailBackground{
+        display: unset;
+    }
+    .itemDetailImg{
+        width: 85%;
+    }
+    .itemDetailPrice{
+        margin: 15px 0;
+    }
 }

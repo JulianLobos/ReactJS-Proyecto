@@ -54,7 +54,7 @@ export const CartProvider = ({children}) => {
     ////////////     toastify     ////////////
     
     const addAlert = (counter) => toast.success(counter > 1 ? `${counter} productos agregados al carrito!` : `${counter} producto agregado al carrito!`, 
-    {position: "bottom-right",
+    {position: "top-center",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,

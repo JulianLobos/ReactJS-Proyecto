@@ -18,7 +18,7 @@ const ItemDetail = ({img}) => {
     return(
         <div className='itemDetailBackground'>
             <p className='itemDetailTitle'>{img.name}</p>
-            <img className='itemDetailImg' src={img.img} alt={img.description}/>
+            <img className='itemDetailImg' src={img.img} alt={'jurold photography | ' + img.name}/>
             <div className='itemDetailInfo'>
                 <p className='itemDetailPrice'>${img.price}</p>
                 <p className='mediosDePago'><PaymentIcon /> Ver los medios de pago</p>

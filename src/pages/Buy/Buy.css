@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .submitForm{
@@ -33,4 +34,16 @@
 
 .circularProgress{
     margin: 15px;
+}
+
+.submitForm:disabled:hover{
+    background-color: unset;
+    color: #ccc;
+    border: 1px solid rgb(245, 71, 71);
+}
+
+@media (max-width: 800px) {
+    .formContainer{
+        padding: 1rem;
+    }
 }
