@@ -24,6 +24,12 @@
     margin: 0 auto;
 }
 
+.stockDisponible{
+    font-weight: 600;
+    color: rgb(66, 173, 66);
+    margin: 15px 0;
+}
+
 .itemDetailPrice{
     font-size: 2.5rem;
     font-weight: 600;

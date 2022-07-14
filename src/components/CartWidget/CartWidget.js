@@ -10,7 +10,6 @@ const CartWidget = () => {
   const { getQuantity } = useContext(CartContext)
 
   return (
-    getQuantity() > 0 ? 
     <Link to="/cart">
     <div className='cartIcon'>
       <ShoppingCartIcon />
@@ -19,8 +18,6 @@ const CartWidget = () => {
       </div>
     </div>
   </Link>
-  :
-  ""
   )
 }
 

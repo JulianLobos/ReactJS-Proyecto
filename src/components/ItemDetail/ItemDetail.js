@@ -26,6 +26,7 @@ const ItemDetail = ({img}) => {
                 <p className='itemDetailDescription'>{img.description}</p>
                 <p className='tamano'>Tamaño en cm:</p>
                 <p className='itemDetailTamano'>{img.size}</p>
+                <p className='stockDisponible'>Stock disponible: {img.stock}</p>
                 {isInCart(img.id) ? <Link to="/cart"><button className='itemDetailBtn'>Finalizar Compra</button></Link> : <ItemCount img={img} stock={img.stock} initial="1" addItem={addItem}/>}
                 <ToastContainer/>
             </div>

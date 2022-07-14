@@ -33,11 +33,12 @@ const Buy = () => {
     setIsLoading(true);
     const date = new Date();
     const totalPurchase = totalPrice();
-		const docRef = await addDoc(collection(db, 'purchases'), {
+		const docRef = await addDoc(collection(db, 'orders'), {
 			values,
       cartItems,
       date,
       totalPurchase,
+      estado: 'generada',
 		});
 		setPurchaseID(docRef.id);
 		setValues(initialState);
