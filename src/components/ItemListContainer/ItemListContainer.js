@@ -28,6 +28,9 @@ const ItemListContainer = () => {
 
     return(
         <div className="container">
+            {category ? 
+            <p className='pageTitle'>jurold | Black and white photography <span className='pageCategory'>{category}</span></p>
+            : <p className='pageTitle'>jurold | Black and white photography</p>}
             {imagesData.length > 0 ? <ItemList images={imagesData} />
                 : <div><CircularProgress className='progress'/></div>
             }

@@ -30,10 +30,15 @@
 
 .finishPurchaseMessage{
     padding: 0 0 15px 0;
+    margin: 0 10px;
 }
 
 .circularProgress{
     margin: 15px;
+}
+
+.submitForm:disabled{
+    border: 1px solid rgb(245, 71, 71);
 }
 
 .submitForm:disabled:hover{

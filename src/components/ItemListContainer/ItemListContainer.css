@@ -30,6 +30,38 @@
     margin: 25%;
 }
 
+.pageTitle{
+    font-size: 2rem;
+    padding: 80px 0 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.pageCategory{
+    display: block;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    -webkit-animation: entrada-subtitulo 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: entrada-subtitulo 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes entrada-subtitulo {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes entrada-subtitulo {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+
 @media (max-width: 800px) {
     .itemsContainer{
         padding: 35px 0 0 0;
