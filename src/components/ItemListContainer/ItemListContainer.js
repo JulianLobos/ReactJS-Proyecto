@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import "./ItemListContainer.css";
-import { CircularProgress } from '@mui/material';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
+import Error from '../../pages/Error/Error';
 
 //////////////     Firebase - Firestore     //////////////
 import { db } from '../../firebase/firebaseConfig'
@@ -28,11 +28,11 @@ const ItemListContainer = () => {
 
     return(
         <div className="container">
-            {category ? 
+            {category === 'animals' || category === 'nature' || category === 'street' || category === 'landscapes' ? 
             <p className='pageTitle'>jurold | Black and white photography <span className='pageCategory'>{category}</span></p>
             : <p className='pageTitle'>jurold | Black and white photography</p>}
             {imagesData.length > 0 ? <ItemList images={imagesData} />
-                : <div><CircularProgress className='progress'/></div>
+                : <div><Error /></div>
             }
         </div>
     );

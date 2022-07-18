@@ -66,4 +66,8 @@
     .itemsContainer{
         padding: 35px 0 0 0;
     }
+    .pageTitle{
+        font-size: 1.25rem;
+        padding: 40px 0 10px 0;
+    }
 }

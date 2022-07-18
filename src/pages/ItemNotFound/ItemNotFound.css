@@ -1,4 +1,4 @@
-.errorContainer{
+.itemNotFoundContainer{
     height: 90vh;
     width: 100%;
     display: flex;
@@ -10,7 +10,8 @@
 	        animation: entrance 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
 }
 
-.errorMessage{
+
+.itemNotFoundTitle{
     font-weight: 900;
     font-size: 2rem;
     border: 3px solid rgb(245, 71, 71);
@@ -20,32 +21,34 @@
     transition: all 0.3s ease;
 }
 
-.errorMessage:hover{
+.itemNotFoundTitle:hover{
     background-color: rgb(245, 71, 71);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     transform: scale(1.1);
 }
 
-.errorIcon{
-    margin: 0 0.5rem 0 0;
+@-webkit-keyframes entrance {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
-
-.errorVolver{
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    margin: 1.5rem 0 0 0;
-}
-
-.errorContainer>a{
-    color: black;
-    text-decoration: none;
+@keyframes entrance {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 @media (max-width: 800px) {
-    .errorMessage{
-        padding: 0.75rem 1.5rem;
-        font-size: 1.25rem;
-    }
+  .itemNotFoundTitle{
+      padding: 0.75rem 1.5rem;
+      font-size: 1.25rem;
+  }
 }
+  

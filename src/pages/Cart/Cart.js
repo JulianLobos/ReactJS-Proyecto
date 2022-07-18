@@ -42,17 +42,18 @@ const Cart = () => {
       </div>
       <div className='cartFinish'>
       <p className='cartItemsTotal'>Total carrito = ${totalPrice()}</p>
-      <button className='cartItemsClear' onClick={() => clear()}>Limpiar Carrito</button>
       </div>
       <Link to="/buy">
         <button className='cartItemsBuy'>Comprar</button>
       </Link>
+      <button className='cartItemsClear' onClick={() => clear()}><DeleteIcon /> Limpiar Carrito</button>
     </div> :
     <div className='emptyCart'>
       <p className='emptyCartText'><ProductionQuantityLimitsIcon /> Carrito Vacío!</p>
       <Link to="/">
         <p className='emptyCartGoBack'><ArrowBackIcon /> Vuelve al home para seguir comprando!</p>
       </Link>
+
     </div>
   )
 }

@@ -2,11 +2,11 @@ import {useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { CircularProgress } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import ItemNotFound from '../../pages/ItemNotFound/ItemNotFound';
 
 import { db } from '../../firebase/firebaseConfig';
 
@@ -37,7 +37,7 @@ const ItemDetailContainer = () => {
                         <ArrowBackIcon className='arrowBack'/>
                     </Tippy>
                 </Link>
-                {loading ? <div><CircularProgress className='progress'/></div> : <ItemDetail img={img}/>}
+                {img.name === undefined && !loading ? <ItemNotFound /> : <ItemDetail img={img}/>}
             </div>
         </div>
     )
