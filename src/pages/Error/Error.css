@@ -6,8 +6,8 @@
     align-items: center;
     flex-direction: column;
     padding: 30px;
-    -webkit-animation: entrance 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
-	        animation: entrance 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+    -webkit-animation: entrance 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+	        animation: entrance 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
 }
 
 .errorMessage{
