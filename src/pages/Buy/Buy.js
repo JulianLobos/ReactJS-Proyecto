@@ -15,6 +15,7 @@ const initialState = {
 	name: '',
 	lastName: '',
 	email: '',
+  emailVerification: '',
 };
 
 const Buy = () => {
@@ -61,7 +62,7 @@ const Buy = () => {
 					value={values.name}
 					onChange={handleOnChange}
           required
-          disabled={purchaseID!==''}
+          disabled={totalPrice() === 0}
           fullWidth
 				/>
 				<TextField
@@ -73,7 +74,7 @@ const Buy = () => {
 					value={values.lastName}
 					onChange={handleOnChange}
           required
-          disabled={purchaseID!==''}
+          disabled={totalPrice() === 0}
           fullWidth
 				/>
 				<TextField
@@ -86,10 +87,24 @@ const Buy = () => {
 					value={values.email}
 					onChange={handleOnChange}
           required
-          disabled={purchaseID!==''}
+          disabled={totalPrice() === 0}
           fullWidth
 				/>
-        {purchaseID!=='' ? '' : <button disabled={totalPrice() === 0} className='submitForm'>Enviar</button>}
+        <TextField
+          id="outlined-basic" 
+          label="Repite tu email"
+          variant="outlined"
+          type="email"
+					style={{ margin: 10, maxWidth: 400, minWidth: 280 }}
+					name='emailVerification'
+					value={values.emailVerification}
+					onChange={handleOnChange}
+          required
+          disabled={totalPrice() === 0}
+          fullWidth
+				/>
+        {values.email !== values.emailVerification ? <p className='emailVerification'>¡Las direcciones de correo electronico no coinciden!</p> : ''}
+        {totalPrice() === 0 ? <button disabled className='submitForm'>Enviar</button> : <button disabled={values.email !== values.emailVerification} className='submitForm'>Enviar</button>}
       </form>
       {isLoading ? <CircularProgress className='circularProgress'/> : ''}
       {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} />}

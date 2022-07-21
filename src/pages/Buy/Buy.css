@@ -47,6 +47,11 @@
     border: 1px solid rgb(245, 71, 71);
 }
 
+.emailVerification{
+    color: rgb(245, 71, 71);
+    font-weight: 600;
+}
+
 @media (max-width: 800px) {
     .formContainer{
         padding: 1rem;
