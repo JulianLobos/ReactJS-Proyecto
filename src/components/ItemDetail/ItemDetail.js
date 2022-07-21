@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import './ItemDetail.css';
-import PaymentIcon from '@mui/icons-material/Payment';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
+import ModalPayment from '../ModalPayment/ModalPayment';
 
 // toastify
 import { ToastContainer } from 'react-toastify';
@@ -21,7 +21,7 @@ const ItemDetail = ({img}) => {
             <img className='itemDetailImg' src={img.img} alt={'jurold photography | ' + img.name}/>
             <div className='itemDetailInfo'>
                 <p className='itemDetailPrice'>${img.price}</p>
-                <p className='mediosDePago'><PaymentIcon /> Ver los medios de pago</p>
+                <ModalPayment />
                 <p className='envioGratis'><LocalShippingIcon /> Envio gratis!</p>
                 <p className='itemDetailDescription'>{img.description}</p>
                 <p className='tamano'>Tamaño en cm:</p>
