@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Jurold | Black and white photography
+![](https://i.imgur.com/MUStPU3.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- El proyecto consiste en realizar un e-commerce. En este caso, realicé una tienda de fotografías donde el cliente puede comprar imagenes impresas y encuadradas.
+- El usuario al ingresar puede ver todas las imagenes en su pantalla o puede filtrarlas mediante las categorías que se encuentran en la barra de navegación.
+- Una vez elegida la cantidad de items que quiere comprar, se puede dirigir al carrito a través del icono en la barra de navegación o dentro del detalle de cada item que fue seleccionado.
+- Cada item cuenta con una disponibilidad de stock que se muestra en su pagina de detalle. Por lo tanto, se le permitirá elegir una cantidad a comprar no mayor a ese número.
+- Una vez en el carrito, allí puede eliminar algún item si así lo desea, agregar más cantidad de cada uno, o borrar el carrito entero.
+- Allí podrá ver el precio de cada item y el precio total.
+- Por último al darle al botón de compra, se lo llevará a un formulario para que el cliente cargue sus datos y una vez realizado, al darle al botón de "Enviar", le aparecerá el mensaje de compra realizada con el ID de la transacción.
 
-## Available Scripts
+____
 
-In the project directory, you can run:
+###Navegación
 
-### `npm start`
+![](https://i.imgur.com/TGUYFf9.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+___
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###Librerías utilizadas:
+- Material UI
+- Toastify
+- TippyJS
+- Firebase
+- React-Router-Dom
+- Axios
 
-### `npm test`
+_Las librerías Material UI, Toastify y TippyJS fueron utilizadas para el estilo y para mejorar la experiencia del usuario por ejemplo en la adición de tooltips en ciertas partes de la app. Firebase es utilizada como base de datos para los productos de la tienda. React Router Dom se usa para la navegación dentro de la aplicación y por ultimo axios que fue utilizado para las promesas dentro del proyecto._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+___

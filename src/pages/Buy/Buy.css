@@ -66,6 +66,8 @@
 }
 .itemBrief{
     height: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .itemBriefPrice{
@@ -75,8 +77,7 @@
 
 .itemBriefName{
     text-align: start;
-    margin-right: 25px;
-    margin-left: 10px;
+    margin: 0 25px;
 }
 
 .detalleDeCompra{

@@ -22,7 +22,7 @@ const Buy = () => {
   const [values, setValues] = useState(initialState);
 	const [purchaseID, setPurchaseID] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { cartItems, setCartItem, totalPrice } = useContext(CartContext);
+  const { cartItems, setCartItem, totalPrice, getItemTotalPrice } = useContext(CartContext);
 
   const handleOnChange = (e) => {
     const { value, name } = e.target;
@@ -118,7 +118,7 @@ const Buy = () => {
               <p className='itemBrief'>
                 <span className='itemBriefCounter'>x{item.counter}</span>
                 <span className='itemBriefName'>{item.name}</span> 
-                <span className='itemBriefPrice'>${item.price}</span> 
+                <span className='itemBriefPrice'>${getItemTotalPrice(item)}</span> 
               </p>
               
             </div>
