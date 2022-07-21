@@ -26,7 +26,7 @@ ___
 - React-Router-Dom
 - Axios
 
-_Las librerías Material UI, Toastify y TippyJS fueron utilizadas para el estilo y para mejorar la experiencia del usuario, Material UI es utilizada para los iconos, modal y formularios. Toastify es una librería de alertas y éstas aparecen al momento de agregar productos al carrito. TippyJS es utilizada para agregar tooltips en algunos elementos de la página. Firebase es utilizada como base de datos para los productos de la tienda. React Router Dom se usa para la navegación dentro de la aplicación y por ultimo axios que fue utilizado para las promesas dentro del proyecto._
+_Las librerías Material UI, Toastify y TippyJS fueron aplicados para el estilo y para mejorar la experiencia del usuario, Material UI es empleado para los iconos, modal y formularios. Toastify es una librería de alertas y éstas aparecen al momento de agregar productos al carrito. TippyJS es utilizada para agregar tooltips en algunos elementos de la página. Firebase es recurrido como base de datos para los productos de la tienda. React Router Dom se usa para la navegación dentro de la aplicación y por ultimo axios que fue utilizado para las promesas dentro del proyecto._
 
 ___
 
@@ -35,16 +35,16 @@ ___
 
 _Aquí unas capturas de la version mobile_
 
-![](https://i.imgur.com/jiMeLha.png)
+![](https://i.imgur.com/ud7SZgj.png)
 
 
-![](https://i.imgur.com/GhpDlkX.png)
+![](https://i.imgur.com/M3u48So.png)
 
 
-![](https://i.imgur.com/SgWWcYz.png)
+![](https://i.imgur.com/LaFDHh6.png)
 
 
-![](https://i.imgur.com/Reugbek.png)
+![](https://i.imgur.com/knp68Ym.png)
 
 
-![](https://i.imgur.com/8T3PHVw.png)
+![](https://i.imgur.com/Jzmp1wi.png)
