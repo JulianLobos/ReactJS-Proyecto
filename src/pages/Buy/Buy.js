@@ -49,7 +49,7 @@ const Buy = () => {
 
 
   return (
-    <div>
+    <div className='buyBody'>
       <h1 className='buyTitle'>Finaliza tu compra!</h1>
       <p className='finishPurchaseMessage'>* Rellena los siguientes campos con tus datos para finalizar tu compra!</p>      
       <form className='formContainer' onSubmit={onSubmit}>
@@ -108,6 +108,24 @@ const Buy = () => {
       </form>
       {isLoading ? <CircularProgress className='circularProgress'/> : ''}
       {purchaseID && <PurchaseSuccess PurchaseId={purchaseID} />}
+
+      {totalPrice() === 0 ? '' : 
+      <div className='buyBrief'>
+        <p className='detalleDeCompra'>Detalle de compra</p>
+        {cartItems.map((item) => {
+          return(
+            <div>
+              <p className='itemBrief'>
+                <span className='itemBriefCounter'>x{item.counter}</span>
+                <span className='itemBriefName'>{item.name}</span> 
+                <span className='itemBriefPrice'>${item.price}</span> 
+              </p>
+              
+            </div>
+          )
+        })}
+        <p className='briefTotalPrice'><span className='totalPriceSpan'>Precio total:</span> ${totalPrice()}</p>
+      </div>}
     </div>
   )
 }

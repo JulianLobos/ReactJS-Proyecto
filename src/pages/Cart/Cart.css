@@ -1,5 +1,5 @@
 .cart{
-    padding: 100px 0 0 0;
+    padding: 100px 0 50px 0;
 }
 
 .cartTitle{
@@ -225,7 +225,7 @@
 
 @media (max-width: 800px) {
     .cart{
-        padding: 40px 0 0 0;
+        padding: 40px 0 40px 0;
     }
     .cart, .cartTitles, .cartItemCounter{
         font-size: 0.75rem;

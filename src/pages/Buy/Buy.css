@@ -52,6 +52,57 @@
     font-weight: 600;
 }
 
+.buyBrief{
+    font-family: 'Montserrat', sans-serif;
+    text-align: start;
+    color: white;
+    margin: 30px auto;
+    width: max-content;
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+    background-color: rgb(70, 70, 202);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.itemBrief{
+    height: 30px;
+}
+
+.itemBriefPrice{
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.itemBriefName{
+    text-align: start;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.detalleDeCompra{
+    font-weight: 600;
+    font-size: 1.20rem;
+    margin: 0 0 15px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.briefTotalPrice{
+    font-weight: 600;
+    font-size: 1.15rem;
+    border-top: 1px solid #ccc;
+    margin: 15px 0 0 0;
+    padding: 5px 0 0 0;
+}
+
+.totalPriceSpan{
+    margin-right: 20px;
+}
+
+.buyBody{
+    padding: 0 0 50px 0;
+}
+
 @media (max-width: 800px) {
     .formContainer{
         padding: 1rem;
