@@ -114,13 +114,12 @@ const Buy = () => {
         <p className='detalleDeCompra'>Detalle de compra</p>
         {cartItems.map((item) => {
           return(
-            <div>
+            <div key={item.id} >
               <p className='itemBrief'>
                 <span className='itemBriefCounter'>x{item.counter}</span>
                 <span className='itemBriefName'>{item.name}</span> 
                 <span className='itemBriefPrice'>${getItemTotalPrice(item)}</span> 
               </p>
-              
             </div>
           )
         })}
